@@ -34,14 +34,17 @@ bot.command("restart", (ctx) => {
 
 bot.command("startt", (ctx) => {
     executarComando("pm2 start bot_logs", ctx);
+    ctx.reply("BOT LOGS INICIADO COM SUCESS0")
 });
 
 bot.command("stop", (ctx) => {
     executarComando("pm2 stop bot_logs", ctx);
+    ctx.reply("BOT LOGS PARADO COM SUCESS0")
 });
 
 bot.command("update", (ctx) => {
     executarComando("cd ../kyo-company && git pull && npm install && pm2 restart bot_logs", ctx);
+    ctx.reply("BOT LOGS ATUALIZADO COM SUCESS0")
 });
 
 bot.start();
